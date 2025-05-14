@@ -53,4 +53,4 @@ This will push the initialized folder into GitHub repository.
 
 ##  STEP 3
 
-
+Changes made to the master branch
