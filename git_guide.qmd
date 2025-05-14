@@ -41,7 +41,7 @@ To initialize the git repository do the following steps:
 
     git commit -m "Initialising the repository"
 
--   Create a new GitHub repository- repo_assignment2, and connect your local repo using the SSH key:
+-   Create a new GitHub repository- assignment2.1, add a gitignore file in R and connect your local repo using the SSH key:
 
     git remote add origin git\@github.com:richa1623/repo_assignment2.git
 
@@ -51,29 +51,94 @@ To initialize the git repository do the following steps:
 
 This will push the initialized folder into GitHub repository.
 
-##  STEP 3
+## STEP 3
 
-Changes made to the master branch
+Creating a new branch:
 
-This is the change made in testbranch
+-   Create and switch to a new branch:
 
+    git checkout -b testbranch
 
+-   Make some changes in the git_guide.qmd in Rstudio:
 
+    "This is a change made in the testbranch."
 
+-   Stage and commit the changes:
 
+    git add git_guide.qmd
 
+    git commit -m "Updates on testbranch"
 
+    git push -u origin testbranch
 
+## STEP 4
 
+Add Data Folder and Amend Commit:
 
+-   Create a data folder and add your Assignment 1 data to it.
 
+    mkdir data
 
+    mv /path/to/assignment1/data/\* data/
 
+-   Amend the previous commit to include the data folder:
 
+    git add data/
 
+    git commit --amend --no-edit
 
+    git push -f origin testbranch
 
+## STEP 5
 
+Simulate a Merge Conflict:
 
+-   Switch back to the main branch:
 
+    git checkout main
 
+-   Modify example.qmd differently:
+
+    "Changes made to the master branch"
+
+-   Stage and commit:
+
+    git add example.qmd
+
+    git commit -m "Main branch conflicting change"
+
+    git push origin master
+
+## STEP 6
+
+-   Merge the changes from testbranch:
+
+    git merge testbranch
+
+-   Resolve the conflict in example.qmd.
+
+-   Stage, commit, and push the resolved conflict:
+
+    git add example.qmd
+
+    git commit -m "Resolved merge conflict"
+
+    git push origin master
+
+## STEP 7
+
+Tag and Cleanup
+
+-   Create an annotated tag:
+
+    git tag -a v1.0 -m "Assignment 2 "
+
+    git push origin v1.0
+
+## STEP 8
+
+-   Delete the testbranch locally and on GitHub:
+
+    git branch -d testbranch
+
+    git push origin --delete testbranch
