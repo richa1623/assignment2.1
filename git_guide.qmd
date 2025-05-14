@@ -6,6 +6,7 @@ format:
       pdf: default
 editor: visual
 ---
+
 # Introduction
 
 This guide demonstrates how to use Git, GitHub, and the command line interface for version control.
@@ -38,7 +39,7 @@ To initialize the git repository do the following steps:
 
 -   Commit the file:
 
-git commit -m "Initial commit"
+    git commit -m "Initialising the repository"
 
 -   Create a new GitHub repository- repo_assignment2, and connect your local repo using the SSH key:
 
@@ -49,4 +50,7 @@ git commit -m "Initial commit"
     git push -u origin master
 
 This will push the initialized folder into GitHub repository.
+
+##  STEP 3
+
 
