@@ -1,0 +1,52 @@
+---
+title: "git_guide"
+author: Richa Anghan
+format: 
+      html: default
+      pdf: default
+editor: visual
+---
+# Introduction
+
+This guide demonstrates how to use Git, GitHub, and the command line interface for version control.
+
+## Step 1
+
+In R studio, click the 'File' option and create a new R project named 5513_Assignment2. In the new project add a new qmd file which can render into HTML file.
+
+![](images/Screenshot%202025-05-14%20202259.png)
+
+This is how the rendered version would look like.
+
+## STEP 2
+
+To initialize the git repository do the following steps:
+
+-   Open Git Bash
+
+-   Navigate to your project directory using the following command :
+
+    cd /c/Users/Richa/OneDrive/Desktop/Assignment2_5513
+
+-   Initialize a Git repository using the following command:
+
+    git init
+
+-   Add the example.qmd file to the staging area:
+
+    git add git_guide.qmd
+
+-   Commit the file:
+
+git commit -m "Initial commit"
+
+-   Create a new GitHub repository- repo_assignment2, and connect your local repo using the SSH key:
+
+    git remote add origin git\@github.com:richa1623/repo_assignment2.git
+
+    git branch -M master
+
+    git push -u origin master
+
+This will push the initialized folder into GitHub repository.
+
